@@ -49,17 +49,17 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System" />
     <Reference Include="OTAPI">
-      <HintPath>..\..\tshock_4.3.24\OTAPI.dll</HintPath>
+      <HintPath>..\..\TShock-5.2-for-Terraria-1.4.4.9-win-x64-Release\bin\OTAPI.dll</HintPath>
     </Reference>
     <Reference Include="TerrariaServer">
-      <HintPath>..\..\tshock_4.3.24\TerrariaServer.exe</HintPath>
+      <HintPath>..\..\TShock-5.2-for-Terraria-1.4.4.9-win-x64-Release\bin\TerrariaServer.dll</HintPath>
     </Reference>
     <Reference Include="TShockAPI">
-      <HintPath>..\..\tshock_4.3.24\ServerPlugins\TShockAPI.dll</HintPath>
+      <HintPath>..\..\TShock-5.2-for-Terraria-1.4.4.9-win-x64-Release\ServerPlugins\TShockAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup />
   <Target Name="AfterBuild">
-    <Copy SourceFiles="$(OutDir)Map_TShock.dll" DestinationFolder="$(SolutionDir)..\tshock_4.3.24\ServerPlugins" />
+    <Copy SourceFiles="$(OutDir)Map_TShock.dll" DestinationFolder="$(SolutionDir)..\TShock-5.2-for-Terraria-1.4.4.9-win-x64-Release\ServerPlugins" />
   </Target>
 </Project>
