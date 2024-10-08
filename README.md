@@ -74,7 +74,7 @@ to generate tiles and html file for web viewing
 
 Updates
 -------
-+ 5.2.0.1008: ChatGPT assisted migration to .NET 8 ([Issue #4](issues/4))
++ 5.2.0.1008: ChatGPT assisted migration to .NET 8 ([Issue #4](https://github.com/elevatorguy/TDSM_map/issues/4))
 + 4.2.11.1026: update to API 22.
 + 4.2.8.0816: added new feature: generate files for web map viewing.
 + 4.3.8.0808: update to API 21.
