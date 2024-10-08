@@ -1,53 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CA18997C-8876-4717-B153-48923A735D2D}</ProjectGuid>
+    <TargetFramework>net8.0</TargetFramework>
     <OutputType>Library</OutputType>
     <RootNamespace>TShock_Map</RootNamespace>
     <AssemblyName>Map_TShock</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <ConsolePause>false</ConsolePause>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <DebugType>none</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <ConsolePause>false</ConsolePause>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
   <ItemGroup>
-    <Compile Include="MapPlugin.cs" />
-    <Compile Include="MapPlugin_Commands.cs" />
-    <Compile Include="MapPlugin_Mapper.cs" />
-    <Compile Include="MapPlugin_Mapper2.cs" />
-    <Compile Include="MapPlugin_Misc.cs" />
-    <Compile Include="NDesk.Options\Options.cs" />
-    <Compile Include="ProgressLogger.cs" />
-    <Compile Include="PropertiesFile.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Drawing" />
-    <Reference Include="System" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" /> <!-- Adjust version as needed -->
     <Reference Include="OTAPI">
       <HintPath>..\..\tshock_4.3.24\OTAPI.dll</HintPath>
     </Reference>
@@ -58,8 +19,9 @@
       <HintPath>..\..\tshock_4.3.24\ServerPlugins\TShockAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
-  <Target Name="AfterBuild">
-    <Copy SourceFiles="$(OutDir)Map_TShock.dll" DestinationFolder="$(SolutionDir)..\tshock_4.3.24\ServerPlugins" />
+
+  <Target Name="AfterBuild" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetDir)$(TargetName).dll" DestinationFolder="$(SolutionDir)..\tshock_5.2\ServerPlugins" />
   </Target>
+
 </Project>
