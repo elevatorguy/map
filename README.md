@@ -2,7 +2,8 @@ map for tshock
 ============
 
 This adds an in-game Terraria World Mapper:
-I would like to thank the authors of MoreTerra and Terrafirma for their work on the color codes, without them this plugin would not be possible.
+I would like to thank the authors of [MoreTerra](https://github.com/mike-mo/MoreTerra) and [Terrafirma](https://github.com/mrkite/TerraFirma) for their work on the color codes, without them this plugin would not be possible.
+
 Features
 --------
 
