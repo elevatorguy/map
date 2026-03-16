@@ -1,69 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CA18997C-8876-4717-B153-48923A735D2D}</ProjectGuid>
+    <PlatformTarget>x64</PlatformTarget>
     <OutputType>Library</OutputType>
-    <RootNamespace>TShock_Map</RootNamespace>
+    <RootNamespace>Map</RootNamespace>
     <AssemblyName>Map_TShock</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
+    <Description>Server Plugin that can autosave an image and map on demand by command (Terraria)</Description>
+    <FileVersion>0.0.38.0</FileVersion>
+    <Version>0.6.1.0</Version>
+    <TargetFramework>net9.0</TargetFramework>
+    <Copyright>Jason Garner 2011-2015</Copyright>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <ConsolePause>false</ConsolePause>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <DebugType>none</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <ConsolePause>false</ConsolePause>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="MapPlugin.cs" />
-    <Compile Include="MapPlugin_Commands.cs" />
-    <Compile Include="MapPlugin_Mapper.cs" />
-    <Compile Include="MapPlugin_Mapper2.cs" />
-    <Compile Include="MapPlugin_Misc.cs" />
-    <Compile Include="NDesk.Options\Options.cs" />
-    <Compile Include="ProgressLogger.cs" />
-    <Compile Include="PropertiesFile.cs" />
+    <PackageReference Include="TShock" Version="6.1.0" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.20" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="MonoGame.Framework">
-      <HintPath>..\..\MonoGame.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing" />
-    <Reference Include="System" />
-    <Reference Include="OTAPI">
-      <Aliases>Graphics</Aliases>
-      <HintPath>..\..\TShock-5.2-for-Terraria-1.4.4.9-win-x64-Release\bin\OTAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="TerrariaServer">
-      <HintPath>..\..\TShock-5.2-for-Terraria-1.4.4.9-win-x64-Release\bin\TerrariaServer.dll</HintPath>
-    </Reference>
-    <Reference Include="TShockAPI">
-      <HintPath>..\..\TShock-5.2-for-Terraria-1.4.4.9-win-x64-Release\ServerPlugins\TShockAPI.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup />
-  <Target Name="AfterBuild">
-    <Copy SourceFiles="$(OutDir)Map_TShock.dll" DestinationFolder="$(SolutionDir)..\TShock-5.2-for-Terraria-1.4.4.9-win-x64-Release\ServerPlugins" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
   </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
