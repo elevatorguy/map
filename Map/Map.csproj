@@ -1,27 +1,25 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
     <OutputType>Library</OutputType>
-    <RootNamespace>TShock_Map</RootNamespace>
+    <RootNamespace>Map</RootNamespace>
     <AssemblyName>Map_TShock</AssemblyName>
+    <Description>Server Plugin that can autosave an image and map on demand by command (Terraria)</Description>
+    <FileVersion>6.1.0.0316</FileVersion>
+    <Version>0.6.1.0</Version>
+    <TargetFramework>net9.0</TargetFramework>
+    <Copyright>Jason Garner 2011-2015</Copyright>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="System.Drawing.Common" Version="7.0.0" /> <!-- Adjust version as needed -->
-    <Reference Include="OTAPI">
-      <HintPath>..\..\tshock_4.3.24\OTAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="TerrariaServer">
-      <HintPath>..\..\tshock_4.3.24\TerrariaServer.exe</HintPath>
-    </Reference>
-    <Reference Include="TShockAPI">
-      <HintPath>..\..\tshock_4.3.24\ServerPlugins\TShockAPI.dll</HintPath>
-    </Reference>
+    <PackageReference Include="TShock" Version="6.1.0" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.20" />
   </ItemGroup>
-
-  <Target Name="AfterBuild" AfterTargets="Build">
-    <Copy SourceFiles="$(TargetDir)$(TargetName).dll" DestinationFolder="$(SolutionDir)..\tshock_5.2\ServerPlugins" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
   </Target>
-
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
