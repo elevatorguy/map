@@ -13,7 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="TShock" Version="6.1.0" />
-    <PackageReference Include="System.Drawing.Common" Version="8.0.20" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.14" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
