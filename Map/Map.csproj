@@ -6,7 +6,7 @@
     <RootNamespace>Map</RootNamespace>
     <AssemblyName>Map_TShock</AssemblyName>
     <Description>Server Plugin that can autosave an image and map on demand by command (Terraria)</Description>
-    <FileVersion>6.1.0.0316</FileVersion>
+    <FileVersion>6.1.0.0331</FileVersion>
     <Version>0.6.1.0</Version>
     <TargetFramework>net9.0</TargetFramework>
     <Copyright>Jason Garner 2011-2015</Copyright>

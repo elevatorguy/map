@@ -83,7 +83,7 @@ namespace Map
         }
         public override Version Version
         {
-            get { return new Version(5, 2, 0, 1008); } //Version number reflects tshock version, and date map plugin was updated.
+            get { return new Version(6, 1, 0, 0331); } //Version number reflects tshock version, and date map plugin was updated.
         }
 
         private void PostInitialize(EventArgs args)
