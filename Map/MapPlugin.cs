@@ -117,13 +117,17 @@ namespace Map
             properties.Load();
             var dummy = OutputPath;
             var dummy2 = Colorscheme;
-            var dummy3 = AutosavePath;
-            var dummy4 = AutosaveInterval;
-            var dummy5 = AutosaveTimestamp;
-            var dummy6 = AutosaveHighlight;
-            var dummy7 = AutosaveHighlightID;
+            if(AutosaveEnabled) {
+                var dummy3 = AutosavePath;
+                var dummy4 = AutosaveInterval;
+                var dummy5 = AutosaveTimestamp;
+                var dummy6 = AutosaveHighlight;
+                var dummy7 = AutosaveHighlightID;
+            }
             var dummy8 = AutosaveEnabled;
-            var dummy9 = AutosaveName;
+            if(AutosaveEnabled) {
+                var dummy9 = AutosaveName;
+            }
             properties.Save();
 
             if (Colorscheme == "MoreTerra" || Colorscheme == "Terrafirma")
